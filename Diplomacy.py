@@ -4,11 +4,16 @@ from Nation import Nation
 
 class Diplomacy:
 
-    def __init__(self, nation1_id: int, nation2_id: int):
-        self.nation1_id = nation1_id
-        self.nation2_id = nation2_id
+    def __init__(self, nation1: Nation, nation2: Nation):
+        self.nations = []
+        self.nations.append(nation1)
+        self.nations.append(nation2)
         self.status = "PEACE"
 
+    # Returns those involved in this diplomacy... Probaby should change this to just straight up treaties
+    def get_participants(self):
+        return self.nations
+    
     def declare_war(self):
         self.status = "WAR"
 

@@ -27,6 +27,9 @@ class Nation:
         self.current_soldiers = current_soldiers
         self.max_population = max_population()
 
+    def get_nation_id(self):
+        return self.nation_id
+    
     # Building Buildings
     def build_lumbermill(self):
         if self.wood > 5 and self.stone > 10:
