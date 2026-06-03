@@ -1,9 +1,11 @@
 import random
 
 class Nation:
-
+    id = 0
     # Initalizing a Nation Object
     def __init__(self, wood, stone, food, lumbermill, quarry, farm, house, barrack, fort, lumberjack, miner, farmer, current_pop, current_soldiers):
+        self.nation_id += 1
+        
         # Resources
         self.wood = wood
         self.stone = stone
